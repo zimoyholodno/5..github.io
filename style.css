@@ -38,7 +38,7 @@ body {
   text-align: justify;
   opacity: 80%;
 }
-.container-title{
+.container__title{
   text-align:center;
 }
 aside {
@@ -53,7 +53,7 @@ aside {
 aside > p {
   margin: auto;
 }
-.footer-bs {
+.footer {
   background-color: #0000006a;
   padding: 30px 50px;
   color: rgba(255,255,255,1.00);
@@ -67,7 +67,7 @@ aside > p {
   z-index: 10;
   text-shadow: rgb(0, 0, 0) 1px 0 10px;
 }
-.footer-bs p{
+.footer p{
   text-align: center;
 }
 
@@ -87,7 +87,6 @@ header {
   background-color: rgba(0, 0, 0, 0.474);
   color: rgb(255, 255, 255);
   min-height: 5vh;
-  /*flex-grow: 1;*/
   width: 100%;
 }
 .main-heading {
@@ -99,10 +98,6 @@ header {
   font-size: 45px;
 }
 
-.main-heading p {
-  font-size: 18px;
-  line-height: 26px;
-}
 .header {
   overflow: hidden;
   background-color: #000000;
@@ -120,7 +115,7 @@ header {
   line-height: 25px;
   border-radius: 4px;
 }
-.header-right {
+.header--right {
   float: right;
   display: flex;
   align-items: center;
@@ -137,40 +132,59 @@ header {
   padding-top: 20px;
   opacity: 80%;
 }
-
+li{
+  list-style-type: none;
+}
 .sidenav a {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
   font-size: 25px;
   color: #ffffff;
   display: block;
+  margin-left: 0;
+  padding-left: 0; 
 }
 .sidenav a:hover {
   color: #ff00d060;
 }
-.main {
-  margin-left: 160px;
-  padding: 0px 10px;
-}
 
-@media all and(max-width:480px){
-  .aside {
-  padding: 0%;
-  margin: 0%;
-  }
+@media (max-width:480px){
   .sidenav{
-    font-size: 5px;
+    font-size: 0;
     width:25%;
-    opacity:40%;    
+    opacity:50%;    
+  }
+  .sidenav a{
+    text-align:left;
   }
   .container{
-    justify-content:center;
-    font-size: 5px;
+    font-size: 10px;
     display:flex;
     width: 100%;
   }
-  .footer-bs{
-    display: none;
+  .footer{
+    font-size: 10px;
+    height: 20px;
+    padding:  1em;
+    margin-top: 0px;
+  }
+  .main-heading h1 {
+    font-size: 10px;
+  }
+  .header a{
+    font-size: 10px;
+    padding: 2px; 
+    margin: auto;
+  }
+  .sidenav a{
+    font-size: 10px;
+  }
+  aside {
+  width: 100%;
+  box-shadow:none;
+  }
+  ol{
+    padding-inline-start:6px;
   }
 }
-/*че-то как-то не media
+/*для мобильных телефонов,получается*/
